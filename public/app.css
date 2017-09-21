@@ -1,4 +1,95 @@
-body {
-	margin: 0 auto;
-	width: 50%;
+body{
+	font-family: 'Play', sans-serif;
 }
+
+.menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+
+}
+.menu li a {
+	display: block;
+	text-decoration:none;
+	color: white;
+	padding: .6em 1em;
+	font-size:18px;
+}
+.menu li a:hover{
+	background:#FFC03F;
+}
+
+@media screen and (min-width:30em){
+	.single-nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.single-nav li {
+		flex: 1 0 auto;
+		text-align: center;
+	}
+	.menu-section{
+		padding-top:2em;
+		z-index:100;
+		position: absolute;
+		width: 100%;
+	}
+	h1 {
+		color:white;
+		text-align: center;
+		padding-top:2.5em;
+
+	}
+
+	/* for the video */
+
+	.homepage-hero-module {
+		border-right: none;
+		border-left: none;
+		position: relative;
+	}
+	.no-video .video-container video,
+	.touch .video-container video {
+		display: none;
+	}
+
+	.no-video .video-container ,
+	.touch .video-container  {
+		display: block !important;
+	}
+	.video-container {
+		position:fixed;
+		bottom: 0%;
+		left:0%;
+		height: 150%;
+		width:100%;
+		top:-35%;
+		overflow: hidden;
+		background: #000;
+	}
+	.video-container .filter {
+		z-index: 20;
+		position: absolute;
+		background: rgba(0, 0, 0, 0.4);
+		width: 50%;
+	}
+
+
+	#overlay{
+
+		background: linear-gradient(bottom, black 0%, white 100%);
+		background: -webkit-linear-gradient(top,rgba(0,0,0,1),rgba(0,0,0,0.2),rgba(0,0,0,1));
+		background: -o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,1));
+		background: -moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,1));
+
+
+		position: absolute;
+		top:0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+	}
